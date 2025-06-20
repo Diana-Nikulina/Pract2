@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 
+//Класс "Продукт"
 class Product
 {
     public int Id { get; set; }
@@ -15,6 +16,8 @@ class Product
         Category = category;
     }
 }
+
+//Класс "Заказ"
 class Order
 {
     public int OrderId { get; set; }
@@ -31,6 +34,8 @@ class Order
         OrderDate = orderDate;
     }
 }
+
+//Класс "Покупатель"
 class Customer
 {
     public int Id { get; set; }
@@ -43,10 +48,12 @@ class Customer
         City = city;
     }
 }
+
 class Programm
 {
     static void Main(string[] args)
     {
+        //Список продуктов
         List<Product> products = new List<Product>
         {
             new Product(1, "Шоколад", 74, "Сладости"),
@@ -63,6 +70,7 @@ class Programm
             new Product(12, "Сок вишневый", 120, "Напитки"),
             new Product(13, "Булочка с корицей", 49, "Выпечка"),
         };
+        //Список покупателей
         List<Customer> customers = new List<Customer>
         {
             new Customer(1, "Анна Ковалева", "Москва"),
@@ -72,6 +80,7 @@ class Programm
             new Customer(5, "Максим Светлов", "Череповец"),
             new Customer(6, "Артур Богтюжский", "Вологда"),
         };
+        //Список заказов
         List<Order> orders = new List<Order>
         {
 
